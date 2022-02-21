@@ -20,7 +20,11 @@ const createDeck = () => {
     }
   }
 
-  console.log(deck);
+  
+  deck = _.shuffle(deck);
+  
+  return deck;
 };
+
 
 createDeck();
