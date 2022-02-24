@@ -1,30 +1,39 @@
-// 2C = 2 of clubs
-// 2D = 2 of diamonds
-// 2H = 2 of hearts
-// 2S = 2 of spades
-
-let deck = [];
+let decks = [];
 const types = ["C", "D", "H", "S"];
 const specials = ["A", "J", "Q", "K"];
 
-const createDeck = () => {
+//Crea una nueva baraja:
+const createDecks = () => {
   for (let i = 2; i <= 10; i++) {
     for (let type of types) {
-      deck.push(i + type);
+      decks.push(i + type);
     }
   }
 
-  for(let type of types){
-    for(let special of specials){
-      deck.push(special + type);
+  for (let type of types) {
+    for (let special of specials) {
+      decks.push(special + type);
     }
   }
 
-  
-  deck = _.shuffle(deck);
-  
+  decks = _.shuffle(decks);
+
+  return decks;
+};
+
+createDecks();
+
+//Permite tomar una baraja:
+const askDeck = () => {
+  const deck = decks.pop();
   return deck;
 };
 
+//Permite obtener el valor de la baraja:
+const deckValue = (deck) => {
+  const value = deck.substring(0, deck.length - 1);
 
-createDeck();
+  return isNaN(value) ? (value === "A" ? 11 : 10) : value * 1;
+};
+
+deckValue(askDeck());
