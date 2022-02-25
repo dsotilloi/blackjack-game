@@ -15,12 +15,37 @@ html {
   overflow: hidden;
 }
 
-.title {
+header {
   background-color: #000000;
   color: #ffffff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 1rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.title h1 {
+  font-size: 3.5rem;
+}
+
+.title img {
+  width: 3.5rem;
+}
+
+.summary p {
+  font-size: 1.4rem;
+  margin: 0;
+  text-align: center;
+}
+
+#btnNew, #btnAsk, #btnStop {
+  font-size: 1.6rem;
+  margin: 2rem 0.5rem;
 }
 
 .deck {
