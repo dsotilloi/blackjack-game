@@ -18,8 +18,9 @@ html {
 .title {
   background-color: #000000;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
   padding: 1rem;
-  text-align: center;
 }
 
 .deck {
@@ -30,6 +31,6 @@ html {
   width: 15rem;
 }
 
-#player-decks, #computer-decks {
+#playerDecks, #computerDecks {
   height: 25rem;
 }
