@@ -11,14 +11,15 @@
 <body>
 
   <header class="title">
+    <img src="./assets/logo/clover_icon.svg" alt="clover">
     <h1>Blackjack</h1> 
   </header>
 
   <section class="row mt-2">
     <div class="col text-center test">
-      <button class="btn btn-danger">New Game</button>
-      <button class="btn btn-primary">Give me a deck! <span role="img" aria-label="emoji">🔥</span> </button>
-      <button class="btn btn-primary">Stop Game</button>
+      <button id="btnNew" class="btn btn-danger">New Game</button>
+      <button id="btnAsk" class="btn btn-primary">Give me a deck! <span role="img" aria-label="emoji">🔥</span> </button>
+      <button id="btnStop" class="btn btn-primary">Stop Game</button>
     </div>
   </section>
 
@@ -26,20 +27,15 @@
     <section class="row container">
       <div class="col">
         <h2>Player 1 - <small>0</small></h2>
-        <div id="player-decks">
-          <img class="deck" src="./assets/decks/10C.png" alt="deck">
-          <img class="deck" src="./assets/decks/10C.png" alt="deck">
-          <img class="deck" src="./assets/decks/10C.png" alt="deck">
+        <div id="playerDecks">
         </div>
       </div>
     </section>
 
     <section class="row container mt-4">
       <div class="col">
-        <h2>computer 1 - <small>0</small></h2>
-        <div id="computer-decks">
-          <img class="deck" src="./assets/decks/10C.png" alt="deck">
-          <img class="deck" src="./assets/decks/10C.png" alt="deck">
+        <h2>Computer 1 - <small id="smallComputer">0</small></h2>
+        <div id="computerDecks">
           <img class="deck" src="./assets/decks/10C.png" alt="deck">
         </div>
       </div>
