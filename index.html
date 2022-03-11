@@ -1,53 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/styles.css">
   <title>Blackjack Game</title>
 </head>
+
 <body>
 
   <header>
     <section class="title">
       <img src="./assets/logo/clover_icon.svg" alt="clover">
-      <h1>Blackjack</h1> 
+      <h1>Blackjack</h1>
     </section>
     <section class="summary">
-      <p>Gana quien se acerque más a 21 puntos, ¡pero sin pasarse!</p>
-      <p>Pide cartas y prueba suerte 😉</p>
+      <p>Gana quien se acerque más a 21 puntos, pero sin pasarse.</p>
+      <p>¡Comienza una partida y prueba suerte!</p>
     </section>
   </header>
 
   <section class="row mt-2">
-    <div class="col text-center test">
-      <button id="btnNew" class="btn btn-primary">Nuevo juego</button>
-      <button id="btnAsk" class="btn btn-danger">¡Dame una carta! <span role="img" aria-label="emoji">🔥</span> </button>
+    <div class="col text-center">
+
+      <button id="btnNew" class="btn">Nuevo juego</button>
+
+      <button id="btnAsk" class="btn">
+        ¡Dame una carta! 
+        <span role="img" aria-label="emoji">🔥</span> 
+      </button>
+      
       <button id="btnStop" class="btn btn-primary">Detener juego</button>
+
     </div>
   </section>
 
-  <main >
+  <main>
     <section class="row container">
       <div class="col">
-        <h2>Player - <small>0</small></h2>
-        <div id="playerDecks">
-        </div>
+
+        <h2>
+          Humano 
+            <span role="img" aria-label="emoji">🙂</span>
+           - 
+            <small>0</small>
+        </h2>
+
+        <div id="playerDecks" class="desksDiv"></div>
       </div>
     </section>
 
     <section class="row container mt-4">
       <div class="col">
-        <h2>Computer - <small id="smallComputer">0</small></h2>
-        <div id="computerDecks">
-        </div>
+
+        <h2>
+          Máquina 
+          <span role="img" aria-label="emoji">🤖</span>
+           - 
+           <small id="smallComputer">0</small>
+        </h2>
+
+        <div id="computerDecks" class="desksDiv"></div>
       </div>
     </section>
   </main>
-  
+
   <script src="./assets/js/underscore-umd-min.js"></script>
   <script src="./assets/js/game.js"></script>
 </body>
+
 </html>
