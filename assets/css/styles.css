@@ -21,7 +21,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .title {
@@ -53,9 +53,20 @@ header {
   left: 10rem;
   margin-left: -7.5rem;
   position: relative;
-  width: 15rem;
+  width: 13rem;
 }
 
 #playerDecks, #computerDecks {
-  height: 25rem;
+  height: 21rem;
+}
+
+@media (max-width: 768px) {
+  #btnNew, #btnAsk, #btnStop {
+    font-size: 1.4rem;
+    margin: 2rem 0.5rem;
+  }
+
+  h2 {
+    margin-top: 2rem;
+  } 
 }
