@@ -1,4 +1,4 @@
-(() => {
+const BlackJack = (() => {
   "use strict";
 
   let decks = [];
@@ -168,4 +168,9 @@
   });
 
   btnNew.addEventListener("click", () => startPlay());
+
+  return {
+    nuevoJuego: startPlay
+  }
+
 })();
